@@ -79,7 +79,7 @@ while ($row=mysqli_fetch_array($query)) {
 
 
 ?>
-<h1><?php echo htmlentities($row['category']);?> Contents</h1>
+<h1><?php echo htmlentities($row['category']);?></h1>
           <div class="card mb-4">
        <img class="card-img-top" src="admin/postimages/<?php echo htmlentities($row['PostImage']);?>" alt="<?php echo htmlentities($row['posttitle']);?>">
             <div class="card-body">
