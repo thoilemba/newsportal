@@ -9,11 +9,12 @@ if (strlen($_SESSION['login']) == 0) {
         $catid = intval($_GET['cid']);
         $category = $_POST['category'];
         $description = $_POST['description'];
+        date_default_timezone_set('Asia/Kolkata');
         $timestamp = time();
         $update_time = date('Y-m-d H:i:s', $timestamp);
         $query = mysqli_query($con, "Update  tblcategory set CategoryName='$category',Description='$description',UpdationDate='$update_time' where id='$catid'");
         if ($query) {
-            $msg = "Category Updated successfully ";
+            $msg = "Category Updated Successfully";
         } else {
             $error = "Something went wrong. Please try again.";
         }

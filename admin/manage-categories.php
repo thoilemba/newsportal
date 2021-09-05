@@ -100,7 +100,7 @@ if (strlen($_SESSION['login']) == 0) {
 
                                 <?php if ($delmsg) { ?>
                                     <div class="alert alert-danger" role="alert">
-                                        <strong>Oh snap!</strong> <?php echo htmlentities($delmsg); ?>
+                                        <strong> </strong> <?php echo htmlentities($delmsg); ?>
                                     </div>
                                 <?php } ?>
 
