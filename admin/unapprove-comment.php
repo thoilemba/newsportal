@@ -128,7 +128,7 @@ if (strlen($_SESSION['login']) == 0) {
                                                 </thead>
                                                 <tbody>
                                                     <?php
-                                                    $query = mysqli_query($con, "Select tblcomments.id,  tblcomments.name,tblcomments.email,tblcomments.postingDate,tblcomments.comment,tblposts.id as postid,tblposts.PostTitle from  tblcomments join tblposts on tblposts.id=tblcomments.postId where tblcomments.status=0");
+                                                    $query = mysqli_query($con, "Select tblcomments.id,tblcomments.status,tblcomments.name,tblcomments.email,tblcomments.postingDate,tblcomments.comment,tblposts.id as postid,tblposts.PostTitle from  tblcomments join tblposts on tblposts.id=tblcomments.postId where tblcomments.status=0");
                                                     $cnt = 1;
                                                     while ($row = mysqli_fetch_array($query)) {
                                                     ?>
@@ -140,7 +140,7 @@ if (strlen($_SESSION['login']) == 0) {
                                                             <td><?php echo htmlentities($row['comment']); ?></td>
                                                             <td><?php $st = $row['status'];
                                                                 if ($st == '0') :
-                                                                    echo "Wating for approval";
+                                                                    echo "Waiting for approval";
                                                                 else :
                                                                     echo "Approved";
                                                                 endif;

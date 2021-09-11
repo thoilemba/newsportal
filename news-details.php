@@ -79,15 +79,15 @@ if (isset($_POST['submit'])) {
                 <b>Sub Category : </b><?php echo htmlentities($row['subcategory']); ?> <b> Posted on </b><?php echo htmlentities($row['postingdate']); ?>
               </p>
               <p><strong>Share:</strong> <a href="http://www.facebook.com/share.php?u=<?php echo $currenturl; ?>" target="_blank">Facebook</a> |
-               <!-- <a href="https://twitter.com/share?url=<?php echo $currenturl; ?>" target="_blank">Twitter</a> -->|
+                <!-- <a href="https://twitter.com/share?url=<?php echo $currenturl; ?>" target="_blank">Twitter</a> -->|
                 <a href="https://web.whatsapp.com/send?text=<?php echo $currenturl; ?>" target="_blank">Whatsapp</a> |
-               <!-- <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=<?php echo $currenturl; ?>" target="_blank">Linkedin</a> -->
+                <!-- <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=<?php echo $currenturl; ?>" target="_blank">Linkedin</a> -->
               </p>
               <hr />
 
-              <img class="img-fluid rounded" src="admin/postimages/<?php echo htmlentities($row['PostImage']); ?>" alt="<?php echo htmlentities($row['posttitle']); ?>">
+              <img class="img-fluid rounded" src="admin/postimages/<?php echo htmlentities($row['PostImage']); ?>">
 
-              <p class="card-text"><?php
+              <p class=" card-text"><?php
                                     $pt = $row['postdetails'];
                                     echo (substr($pt, 0)); ?></p>
 

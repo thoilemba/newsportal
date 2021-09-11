@@ -61,7 +61,7 @@ include('includes/config.php');
         ?>
 
           <div class="card mb-4">
-            <img class="card-img-top" src="admin/postimages/<?php echo htmlentities($row['PostImage']); ?>" alt="<?php echo htmlentities($row['posttitle']); ?>">
+            <img class="card-img-top" src="admin/postimages/<?php echo htmlentities($row['PostImage']); ?>" >
             <div class="card-body">
               <h2 class="card-title"><?php echo htmlentities($row['posttitle']); ?></h2>
               <p><b>Category : </b> <a href="category.php?catid=<?php echo htmlentities($row['cid']) ?>"><?php echo htmlentities($row['category']); ?></a> </p>
